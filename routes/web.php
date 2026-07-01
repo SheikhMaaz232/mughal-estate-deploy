@@ -72,7 +72,6 @@ use Illuminate\Support\Facades\Route;
 use Modules\Payroll\App\Http\Controllers\DashboardController;
 use Modules\Payroll\App\Http\Controllers\QualificationController;
 
-Route::post('/locale', LocaleController::class)->name('locale.change');
 
 
 // Route::get('/{locale?}', function ($locale = null) {
@@ -383,17 +382,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('dealers', DealerController::class);
 
     // Construction Module Routes
-    Route::prefix('construction')->name('construction.')->group(function () {
-        Route::resource('construction-sites', ConstructionSiteController::class);
-        Route::resource('tenders', TenderController::class);
-        Route::resource('boq-masters', BOQMasterController::class);
-        Route::resource('work-orders', WorkOrderController::class);
-        Route::get('work-orders/get-available-items', [WorkOrderController::class, 'getAvailableItems'])->name('work-orders.get-available-items');
-        Route::get('work-orders/get-remaining-quantity', [WorkOrderController::class, 'getRemainingQuantity'])->name('work-orders.get-remaining-quantity');
-        Route::get('work-orders/get-by-tender/{tenderId}', [WorkOrderController::class, 'getByTender'])->name('work-orders.get-by-tender');
-        Route::resource('work-progress', WorkProgressController::class);
-        Route::resource('contractor-bills', ContractorBillController::class);
-    });
+
 
     //Payroll routes
     Route::prefix('payroll')->name('payroll.')->group(function () {
