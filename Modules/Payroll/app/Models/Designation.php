@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Designation extends Model
 {
+    protected $table = 'designations';
     use HasFactory;
 
     /**
