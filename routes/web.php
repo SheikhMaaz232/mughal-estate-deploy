@@ -255,7 +255,7 @@ Route::middleware('auth')->group(function () {
     Route::put('boq-details/{detailId}', [BOQMasterController::class, 'updateDetail'])->name('boq-masters.updateDetail');
     Route::delete('boq-details/{detailId}', [BOQMasterController::class, 'deleteDetail'])->name('boq-masters.deleteDetail');
     Route::get('boq-masters/get-item-unit/{id}', [BOQMasterController::class, 'getItemMeasurementUnitDetail'])->name('boq-masters.getItemMeasurementUnit');
-    Route::resource('boq-masters', BOQMasterController::class);
+    Route::resource('boq-masters', BOQMasterController::class)->except(['create']);
 
     // Work Order Routes
     Route::get('work-orders/select-boq', [WorkOrderController::class, 'selectBoq'])->name('work-orders.selectBoq');

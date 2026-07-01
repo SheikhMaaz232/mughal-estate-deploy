@@ -1737,3 +1737,214 @@
 [2026-07-01 11:41:25] local.INFO: ViewServiceProvider boot END => 24.61 ms  
 [2026-07-01 11:41:26] local.INFO: ViewServiceProvider boot START  
 [2026-07-01 11:41:26] local.INFO: ViewServiceProvider boot END => 7.57 ms  
+[2026-07-01 11:41:32] local.ERROR: Attempt to read property "avatar" on null (View: D:\laragon\www\mughal-for-deploy\resources\views\layouts\backend.blade.php) (View: D:\laragon\www\mughal-for-deploy\resources\views\layouts\backend.blade.php) {"exception":"[object] (Illuminate\\View\\ViewException(code: 0): Attempt to read property \"avatar\" on null (View: D:\\laragon\\www\\mughal-for-deploy\\resources\\views\\layouts\\backend.blade.php) (View: D:\\laragon\\www\\mughal-for-deploy\\resources\\views\\layouts\\backend.blade.php) at D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\8bd6fa38c26a653b17fbd3cb4e0dd6dc.php:1387)
+[stacktrace]
+#0 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(59): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(Illuminate\\View\\ViewException), 1)
+#1 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#2 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#3 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(191): Illuminate\\View\\View->getContents()
+#4 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(160): Illuminate\\View\\View->renderContents()
+#5 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(78): Illuminate\\View\\View->render()
+#6 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(34): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#7 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(60): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 403, Array)
+#8 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(90): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 403, Array)
+#9 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(897): Illuminate\\Routing\\ResponseFactory->view('errors::403', Array, 403, Array)
+#10 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(818): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#11 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(709): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#12 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(597): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#13 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#14 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#15 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#18 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#19 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#20 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#21 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#22 D:\\laragon\\www\\mughal-for-deploy\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 D:\\laragon\\www\\mughal-for-deploy\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#47 {main}
+
+[previous exception] [object] (Illuminate\\View\\ViewException(code: 0): Attempt to read property \"avatar\" on null (View: D:\\laragon\\www\\mughal-for-deploy\\resources\\views\\layouts\\backend.blade.php) at D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\8bd6fa38c26a653b17fbd3cb4e0dd6dc.php:1387)
+[stacktrace]
+#0 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(59): Illuminate\\View\\Engines\\CompilerEngine->handleViewException(Object(ErrorException), 2)
+#1 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#2 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#3 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(191): Illuminate\\View\\View->getContents()
+#4 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(160): Illuminate\\View\\View->renderContents()
+#5 D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\aaf3724e76ec6ada3b610424e5e0efc7.php(41): Illuminate\\View\\View->render()
+#6 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\laragon\\\\www\\\\...')
+#7 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#8 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(57): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#9 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#10 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#11 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(191): Illuminate\\View\\View->getContents()
+#12 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(160): Illuminate\\View\\View->renderContents()
+#13 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(78): Illuminate\\View\\View->render()
+#14 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(34): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#15 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(60): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 403, Array)
+#16 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(90): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 403, Array)
+#17 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(897): Illuminate\\Routing\\ResponseFactory->view('errors::403', Array, 403, Array)
+#18 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(818): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#19 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(709): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#20 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(597): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#21 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#22 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#23 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\laragon\\www\\mughal-for-deploy\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 D:\\laragon\\www\\mughal-for-deploy\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#55 {main}
+
+[previous exception] [object] (ErrorException(code: 0): Attempt to read property \"avatar\" on null at D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\8bd6fa38c26a653b17fbd3cb4e0dd6dc.php:1387)
+[stacktrace]
+#0 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(256): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 1387)
+#1 D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\8bd6fa38c26a653b17fbd3cb4e0dd6dc.php(1387): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Attempt to read...', 'D:\\\\laragon\\\\www\\\\...', 1387)
+#2 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\laragon\\\\www\\\\...')
+#3 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#4 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(57): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#5 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#6 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#7 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(191): Illuminate\\View\\View->getContents()
+#8 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(160): Illuminate\\View\\View->renderContents()
+#9 D:\\laragon\\www\\mughal-for-deploy\\storage\\framework\\views\\aaf3724e76ec6ada3b610424e5e0efc7.php(41): Illuminate\\View\\View->render()
+#10 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(123): require('D:\\\\laragon\\\\www\\\\...')
+#11 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(124): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#12 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(57): Illuminate\\Filesystem\\Filesystem->getRequire('D:\\\\laragon\\\\www\\\\...', Array)
+#13 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(74): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('D:\\\\laragon\\\\www\\\\...', Array)
+#14 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(208): Illuminate\\View\\Engines\\CompilerEngine->get('D:\\\\laragon\\\\www\\\\...', Array)
+#15 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(191): Illuminate\\View\\View->getContents()
+#16 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(160): Illuminate\\View\\View->renderContents()
+#17 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(78): Illuminate\\View\\View->render()
+#18 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(34): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#19 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(60): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 403, Array)
+#20 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(90): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 403, Array)
+#21 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(897): Illuminate\\Routing\\ResponseFactory->view('errors::403', Array, 403, Array)
+#22 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(818): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#23 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(709): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#24 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(597): Illuminate\\Foundation\\Exceptions\\Handler->renderExceptionResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#25 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(51): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#26 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(171): Illuminate\\Routing\\Pipeline->handleException(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#27 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#30 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#31 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#32 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#33 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(169): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#34 D:\\laragon\\www\\mughal-for-deploy\\vendor\\barryvdh\\laravel-debugbar\\src\\Middleware\\InjectDebugbar.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(109): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(48): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(208): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(126): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#56 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#57 D:\\laragon\\www\\mughal-for-deploy\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1219): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#58 D:\\laragon\\www\\mughal-for-deploy\\public\\index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#59 {main}
+"} 
+[2026-07-01 11:41:36] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:41:36] local.INFO: ViewServiceProvider boot END => 19.13 ms  
+[2026-07-01 11:41:37] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:41:37] local.INFO: ViewServiceProvider boot END => 10.97 ms  
+[2026-07-01 11:41:42] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:41:42] local.INFO: ViewServiceProvider boot END => 14.71 ms  
+[2026-07-01 11:41:43] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:41:43] local.INFO: ViewServiceProvider boot END => 18.6 ms  
+[2026-07-01 11:42:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:42:05] local.INFO: ViewServiceProvider boot END => 16.41 ms  
+[2026-07-01 11:42:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:42:05] local.INFO: ViewServiceProvider boot END => 20.02 ms  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot END => 13.21 ms  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot END => 13.22 ms  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:43:05] local.INFO: ViewServiceProvider boot END => 13.87 ms  
+[2026-07-01 11:44:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:44:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:44:05] local.INFO: ViewServiceProvider boot END => 16.75 ms  
+[2026-07-01 11:44:05] local.INFO: ViewServiceProvider boot END => 17.07 ms  
+[2026-07-01 11:45:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:45:05] local.INFO: ViewServiceProvider boot END => 11 ms  
+[2026-07-01 11:45:05] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:45:05] local.INFO: ViewServiceProvider boot END => 10.14 ms  
+[2026-07-01 11:45:44] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:45:44] local.INFO: ViewServiceProvider boot END => 17.07 ms  
+[2026-07-01 11:45:44] local.INFO: Payroll view composer called for: Construction-Module.construction-site.index  
+[2026-07-01 11:45:47] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:45:47] local.INFO: ViewServiceProvider boot END => 46.16 ms  
+[2026-07-01 11:45:47] local.INFO: Payroll view composer called for: Construction-Module.construction-site.index  
+[2026-07-01 11:45:48] local.INFO: Payroll view composer called for: pagination::bootstrap-5  
+[2026-07-01 11:45:51] local.INFO: Payroll view composer called for: pagination::bootstrap-5  
+[2026-07-01 11:45:51] local.INFO: Payroll view composer called for: layouts.backend  
+[2026-07-01 11:45:52] local.INFO: Payroll view composer called for: layouts.backend  
+[2026-07-01 11:45:56] local.INFO: ViewServiceProvider boot START  
+[2026-07-01 11:45:56] local.INFO: ViewServiceProvider boot END => 20.86 ms  
