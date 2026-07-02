@@ -46,7 +46,7 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('mainHeads', MainHead::all());
             $view->with('units', Unit::all());
             $view->with('projects', Project::all());
-            $view->with('productsData', Product::all());
+            $view->with('productsData', Product::select('id', 'name_en', 'name_ur')->get());
             $view->with('designations', Designation::all());
             $view->with('departments', cache()->remember('departments_list', 3600, function () {
                 return Department::all();
