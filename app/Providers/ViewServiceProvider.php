@@ -57,13 +57,13 @@ class ViewServiceProvider extends ServiceProvider
         logger()->info('ViewServiceProvider boot START');
         View::composer('*', function ($view) {
             $view->with('allowances', cache()->remember('allowances_list', 3600, function () {
-                return Allowance::all();
+                return Allowance::select('id', 'title_en', 'title_ur')->get();
             }));
             $view->with('deductions', cache()->remember('deductions_list', 3600, function () {
-                return Deduction::all();
+                return Deduction::select('id', 'title_en', 'title_ur')->get();
             }));
             $view->with('leaveTypesList', cache()->remember('leave_types_list', 3600, function () {
-                return LeaveType::all();
+                return LeaveType::select('id', 'title_en', 'title_ur')->get();
             }));
             // $view->with('groups', Group::select('id','name_en', 'name_ur')->get());
             $view->with('groups', Cache::remember('groups_data', 3600, function () {
