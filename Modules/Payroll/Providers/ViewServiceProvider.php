@@ -35,7 +35,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer(['*'], function ($view) {
+        View::composer(['payroll::*'], function ($view) {
             Log::info('Payroll view composer called for: ' . $view->getName());
             $view->with('groups', Group::all());
             $view->with('companies', Company::all());
@@ -55,13 +55,12 @@ class ViewServiceProvider extends ServiceProvider
                 return Employee::all();
             }));
 
-               $view->with('allowances', cache()->remember('allowances_list', 3600, function () {
+            $view->with('allowances', cache()->remember('allowances_list', 3600, function () {
                 return Allowance::all();
             }));
-               $view->with('deductions', cache()->remember('deductions_list', 3600, function () {
+            $view->with('deductions', cache()->remember('deductions_list', 3600, function () {
                 return Deduction::all();
             }));
-
         });
     }
 }
