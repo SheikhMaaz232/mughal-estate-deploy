@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Modules\Payroll\App\Models\Allowance;
 use Modules\Payroll\App\Models\Deduction;
+use Modules\Payroll\App\Models\Designation;
 
 class ViewServiceProvider extends ServiceProvider
 {
@@ -46,7 +47,7 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('units', Unit::all());
             $view->with('projects', Project::all());
             $view->with('productsData', Product::all());
-            // $view->with('designations', Designation::all());
+            $view->with('designations', Designation::all());
             $view->with('departments', cache()->remember('departments_list', 3600, function () {
                 return Department::all();
             }));
